@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wjire.CodeBuilder.UI", "Wjire.CodeBuilder.UI\Wjire.CodeBuilder.UI.csproj", "{D96B4596-925A-468D-8E81-85CBB8012007}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.Model", "Wjire.CodeBuilder.Model\Wjire.CodeBuilder.Model.csproj", "{EA0E4A19-4477-4CE7-84B2-2448A6D54A91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.DbService", "Wjire.CodeBuilder.DbService\Wjire.CodeBuilder.DbService.csproj", "{DD3DBC61-AED2-46A8-B6E1-8F3E90517594}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.Util", "Wjire.CodeBuilder.Util\Wjire.CodeBuilder.Util.csproj", "{9A228575-AA5A-49B2-A37F-83A486E8756B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.Sql", "Wjire.CodeBuilder.Sql\Wjire.CodeBuilder.Sql.csproj", "{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql建表语句生成器", "sql建表语句生成器", "{92AA9648-6320-4CB0-8EB2-428E947FFFAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据库操作", "数据库操作", "{646ABB0B-6A3C-4CE5-8055-6E5E3833854E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET项目生成器", ".NET项目生成器", "{4D2EA385-A946-4FC7-A490-AF2046933453}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.cs_Builder", "Wjire.CodeBuilder.cs_Builder\Wjire.CodeBuilder.cs_Builder.csproj", "{93E5AA9C-FE12-4E88-9F42-628248701F1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.sln_Builder", "Wjire.CodeBuilder.sln_Builder\Wjire.CodeBuilder.sln_Builder.csproj", "{52CAB409-5F05-424B-B56C-9FAFE8DA0891}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wjire.CodeBuilder.csproj_Builder", "Wjire.CodeBuilder.csproj_Builder\Wjire.CodeBuilder.csproj_Builder.csproj", "{28860C59-E4AA-4489-BCD9-42EAE7187F9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wjire.CodeBuilder.BaseBuilder", "Wjire.CodeBuilder.BaseBuilder\Wjire.CodeBuilder.BaseBuilder.csproj", "{639D651F-1BCB-4E4D-A995-A1AFEF77958A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D96B4596-925A-468D-8E81-85CBB8012007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96B4596-925A-468D-8E81-85CBB8012007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96B4596-925A-468D-8E81-85CBB8012007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96B4596-925A-468D-8E81-85CBB8012007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0E4A19-4477-4CE7-84B2-2448A6D54A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0E4A19-4477-4CE7-84B2-2448A6D54A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0E4A19-4477-4CE7-84B2-2448A6D54A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0E4A19-4477-4CE7-84B2-2448A6D54A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3DBC61-AED2-46A8-B6E1-8F3E90517594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3DBC61-AED2-46A8-B6E1-8F3E90517594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3DBC61-AED2-46A8-B6E1-8F3E90517594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3DBC61-AED2-46A8-B6E1-8F3E90517594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A228575-AA5A-49B2-A37F-83A486E8756B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A228575-AA5A-49B2-A37F-83A486E8756B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A228575-AA5A-49B2-A37F-83A486E8756B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A228575-AA5A-49B2-A37F-83A486E8756B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E5AA9C-FE12-4E88-9F42-628248701F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E5AA9C-FE12-4E88-9F42-628248701F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E5AA9C-FE12-4E88-9F42-628248701F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E5AA9C-FE12-4E88-9F42-628248701F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CAB409-5F05-424B-B56C-9FAFE8DA0891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CAB409-5F05-424B-B56C-9FAFE8DA0891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CAB409-5F05-424B-B56C-9FAFE8DA0891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CAB409-5F05-424B-B56C-9FAFE8DA0891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28860C59-E4AA-4489-BCD9-42EAE7187F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28860C59-E4AA-4489-BCD9-42EAE7187F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28860C59-E4AA-4489-BCD9-42EAE7187F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28860C59-E4AA-4489-BCD9-42EAE7187F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639D651F-1BCB-4E4D-A995-A1AFEF77958A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639D651F-1BCB-4E4D-A995-A1AFEF77958A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639D651F-1BCB-4E4D-A995-A1AFEF77958A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639D651F-1BCB-4E4D-A995-A1AFEF77958A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD3DBC61-AED2-46A8-B6E1-8F3E90517594} = {646ABB0B-6A3C-4CE5-8055-6E5E3833854E}
+		{29CF6E2C-7AB4-4CC9-B1D4-0018AE46A37E} = {92AA9648-6320-4CB0-8EB2-428E947FFFAB}
+		{93E5AA9C-FE12-4E88-9F42-628248701F1B} = {4D2EA385-A946-4FC7-A490-AF2046933453}
+		{52CAB409-5F05-424B-B56C-9FAFE8DA0891} = {4D2EA385-A946-4FC7-A490-AF2046933453}
+		{28860C59-E4AA-4489-BCD9-42EAE7187F9C} = {4D2EA385-A946-4FC7-A490-AF2046933453}
+		{639D651F-1BCB-4E4D-A995-A1AFEF77958A} = {4D2EA385-A946-4FC7-A490-AF2046933453}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07C3F4EF-982E-40D4-83F9-58E61ABCB883}
+	EndGlobalSection
+EndGlobal

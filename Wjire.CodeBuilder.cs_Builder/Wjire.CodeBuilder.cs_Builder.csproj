@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wjire.CodeBuilder.BaseBuilder\Wjire.CodeBuilder.BaseBuilder.csproj" />
+    <ProjectReference Include="..\Wjire.CodeBuilder.Model\Wjire.CodeBuilder.Model.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿using System.Collections.Generic;
+using System.IO;
+using Wjire.CodeBuilder.cs_Builder;
+using Wjire.CodeBuilder.Model;
+
+namespace Wjire.CodeBuilder.csproj_Builder
+{
+
+    public class Csproj_DTOBuilder : Csproj_AbstractBuilder
+    {
+
+        public Csproj_DTOBuilder()
+        {
+
+        }
+
+        public Csproj_DTOBuilder(List<Cs_AbstractBuilder> builders) : base(builders)
+        {
+
+        }
+
+        protected override string GetTemplateFromPath()
+        {
+            return Path.Combine(base.GetTemplateFromPath(), "DTO.txt");
+        }
+
+        protected override string GetFileToSavePath(FormInfo formInfo)
+        {
+            return Path.Combine(formInfo.BasePath, $"{formInfo.NameSpaceName}.DTO\\{formInfo.NameSpaceName}.DTO.csproj");
+        }
+    }
+}

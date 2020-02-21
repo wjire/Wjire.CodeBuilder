@@ -1,0 +1,12 @@
+﻿using {NameSpaceName}.Entity;
+
+namespace {NameSpaceName}.IRepository
+{
+	/// <summary>
+	/// I{TableName}Repository
+	/// </summary>
+	public interface I{TableName}Repository : IRepository<{TableName}>
+	{
+	   
+	}
+}

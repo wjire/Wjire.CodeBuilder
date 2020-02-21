@@ -1,0 +1,16 @@
+﻿using {NameSpaceName}.Entity;
+using {NameSpaceName}.Repository;
+
+namespace {NameSpaceName}.Logic
+{
+    public class {TableName}Logic
+    {
+        public void Add({TableName} entity)
+        {
+            using (var db = DbFactory.Create{TableName}RepositoryWrite())
+            {
+                db.Add(entity);
+            }
+        }
+    }
+}
