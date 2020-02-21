@@ -271,7 +271,7 @@ namespace Wjire.CodeBuilder
             string entityName = Path.GetFileNameWithoutExtension(textBox_excelPath.Text);
             string text = _sqlBuilder.Create(textBox_excelPath.Text, entityName);
             string savePath = Path.Combine(Path.GetDirectoryName(textBox_excelPath.Text), $"{entityName}.sql");
-            FileHelper.CreateFile(savePath, text);
+            File.WriteAllText(savePath, text);
             Process.Start("notepad.exe", savePath);
         }
 

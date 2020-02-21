@@ -5,13 +5,6 @@
     /// </summary>
     public class TableInfo
     {
-
-        /// <summary>
-        /// 表名
-        /// </summary>
-        public string TableName { get; set; }
-
-
         /// <summary>
         /// 字段名
         /// </summary>
