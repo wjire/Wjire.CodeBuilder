@@ -1,4 +1,6 @@
-﻿using Wjire.Dapper;
+﻿using System.Collections.Generic;
+using Wjire.Dapper;
+using Wjire.Dapper.SqlServer;
 using {NameSpaceName}.Entity;
 
 namespace {NameSpaceName}.Repository
@@ -13,5 +15,28 @@ namespace {NameSpaceName}.Repository
 
         public {TableName}Repository(IUnitOfWork unit) : base(unit) { }
 
+        public void Add({TableName} entity)
+        {
+            Connection.Add(entity, Transaction);
+        }
+
+        public long AddAndReturnIdentity({TableName} entity)
+        {
+            return Connection.AddAndReturnIdentity(entity, Transaction);
+        }
+
+        public void AddOrUpdate({TableName} entity)
+        {
+            //TODO
+            Connection.AddOrUpdate(entity, new { entity.Id }, Transaction);
+        }
+
+        public IEnumerable<{TableName}> QueryPage(int pageIndex, int pageSize, out int pageCount, out int dataCount)
+        {
+            //TODO
+            string dataSql = "select * from {TableName} order by id";
+            string countSql = "select count(0) from {TableName}";
+            return Connection.QueryPage<{TableName}>(dataSql, countSql, pageIndex, pageSize, out pageCount, out dataCount, Transaction);
+        }
     }
 }

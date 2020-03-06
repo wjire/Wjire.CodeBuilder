@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using {NameSpaceName}.Logic;
 using {NameSpaceName}.Entity;
-using {NameSpaceName}.DTO;
 
 namespace {NameSpaceName}.WebApi.Controllers
 {

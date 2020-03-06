@@ -1,4 +1,5 @@
-﻿using {NameSpaceName}.Entity;
+﻿using System.Collections.Generic;
+using {NameSpaceName}.Entity;
 using {NameSpaceName}.Repository;
 using Wjire.Dapper;
 
@@ -11,6 +12,38 @@ namespace {NameSpaceName}.Logic
         public {TableName}Logic(DbContext dbContext)
         {
             _dbContext = dbContext;
+        }
+
+        public void Add({TableName} entity)
+        {
+            using ({TableName}Repository db = new {TableName}Repository(_dbContext.Write))
+            {
+                db.Add(entity);
+            }
+        }
+
+        public long AddAndReturnIdentity({TableName} entity)
+        {
+            using ({TableName}Repository db = new {TableName}Repository(_dbContext.Write))
+            {
+                return db.AddAndReturnIdentity(entity);
+            }
+        }
+
+        public void AddOrUpdate({TableName} entity)
+        {
+            using ({TableName}Repository db = new {TableName}Repository(_dbContext.Write))
+            {
+                db.AddOrUpdate(entity);
+            }
+        }
+
+        public IEnumerable<{TableName}> QueryPage(int pageIndex, int pageSize)
+        {
+            using ({TableName}Repository db = new {TableName}Repository(_dbContext.Read))
+            {
+                return db.QueryPage(pageIndex, pageSize, out int pageCount, out int dataCount);
+            }
         }
     }
 }
