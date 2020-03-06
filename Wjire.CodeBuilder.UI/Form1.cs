@@ -67,7 +67,7 @@ namespace Wjire.CodeBuilder
             List<string> dbList = await _dbService.GetAllDataBase();
             BindDataBase(dbList);
             GetTableNames();
-            AddConnectionInfoToCombox(info);
+            AddConnectionInfoToComboBox(info);
             AddConnectionInfoToCache(info);
             SaveConnectionInfoToResource();
         }
@@ -203,20 +203,15 @@ namespace Wjire.CodeBuilder
             }));
             slnBuilder.AddCsprojBuilder(new Csproj_LogicBuilder());
             slnBuilder.AddCsprojBuilder(new Csproj_DTOBuilder());
-            slnBuilder.AddCsprojBuilder(new Csproj_RepositoryBuilder(new List<Cs_AbstractBuilder>
-            {
-                new Cs_DbFactoryBuilder()
-            }));
+            slnBuilder.AddCsprojBuilder(new Csproj_RepositoryBuilder());
             slnBuilder.AddCsprojBuilder(new Csproj_EntityBuilder());
-
-            FormInfo formInfo = GetCurrentFormInfo();
-            slnBuilder.CreateFile(formInfo);
 
             Cs_ControllerBuilder controllerBuilder = new Cs_ControllerBuilder();
             Cs_LogicBuilder logicBuilder = new Cs_LogicBuilder();
             Cs_RepositoryBuilder repositoryBuilder = new Cs_RepositoryBuilder();
-            Cs_RepositoryFactoryBuilder repositoryFactoryBuilder = new Cs_RepositoryFactoryBuilder();
 
+            FormInfo formInfo = GetCurrentFormInfo();
+            slnBuilder.CreateFile(formInfo);
             foreach (ListViewItem selectedItem in listView_one_tables.SelectedItems)
             {
                 formInfo.TableName = selectedItem.SubItems[1].Text;
@@ -227,7 +222,6 @@ namespace Wjire.CodeBuilder
                 controllerBuilder.CreateFile(formInfo);
                 logicBuilder.CreateFile(formInfo);
                 repositoryBuilder.CreateFile(formInfo);
-                repositoryFactoryBuilder.CreateFile(formInfo);
             }
 
             OpenCurrentNameSpaceFileFolder();
@@ -371,7 +365,7 @@ namespace Wjire.CodeBuilder
         }
 
 
-        private void AddConnectionInfoToCombox(ConnectionInfo info)
+        private void AddConnectionInfoToComboBox(ConnectionInfo info)
         {
             if (comboBox_IP.Items.Contains(info.IP) == false)
             {
@@ -500,6 +494,8 @@ namespace Wjire.CodeBuilder
                 DbName = textBox_dbName.Text,
                 TableName = string.IsNullOrWhiteSpace(tableName) ? string.Empty : tableName,
                 Pwd = textBox_one_pwd.Text,
+                User = textBox_one_user.Text,
+                Host = comboBox_IP.Text,
             };
         }
     }

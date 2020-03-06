@@ -1,8 +1,8 @@
-﻿using Wjire.Db.Dapper;
+﻿using Wjire.Dapper.UnitOfWork;
 
 namespace {NameSpaceName}.Repository
 {
-    public partial class DbFactory
+    public partial class Factory
     {
 
         /// <summary>
@@ -11,7 +11,7 @@ namespace {NameSpaceName}.Repository
         /// <returns></returns>
         public static {TableName}Repository Create{TableName}RepositoryRead()
         {
-            return new {TableName}Repository({DbName}_Read);
+            return new {TableName}Repository(Read);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace {NameSpaceName}.Repository
         /// <returns></returns>
         public static {TableName}Repository Create{TableName}RepositoryWrite()
         {
-            return new {TableName}Repository({DbName}_Write);
+            return new {TableName}Repository(Write);
         }
 
         /// <summary>

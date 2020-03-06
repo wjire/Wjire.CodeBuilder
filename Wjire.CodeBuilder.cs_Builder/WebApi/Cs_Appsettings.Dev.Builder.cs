@@ -9,18 +9,21 @@ namespace Wjire.CodeBuilder.cs_Builder
     {
         protected override string GetTemplateFromPath()
         {
-            return Path.Combine(base.GetTemplateFromPath(), "appsettings.Development.txt");
+            return Path.Combine(base.GetTemplateFromPath(), "appsettings.txt");
         }
 
         protected override string GetFileToSavePath(FormInfo formInfo)
         {
-            return Path.Combine(formInfo.BasePath, $"{formInfo.NameSpaceName}.WebApi\\appsettings.json");
+            return Path.Combine(formInfo.BasePath, $"{formInfo.NameSpaceName}.WebApi\\appsettings.Development.json");
         }
 
         protected override string ReplaceTemplateOfLine(string line, FormInfo formInfo)
         {
             string str = base.ReplaceTemplateOfLine(line, formInfo);
-            return str.Replace(TemplatePlaceholder.Pwd, formInfo.Pwd);
+            return str
+                .Replace(TemplatePlaceholder.Pwd, formInfo.Pwd)
+                .Replace(TemplatePlaceholder.User, formInfo.User)
+                .Replace(TemplatePlaceholder.Host, formInfo.Host);
         }
     }
 }

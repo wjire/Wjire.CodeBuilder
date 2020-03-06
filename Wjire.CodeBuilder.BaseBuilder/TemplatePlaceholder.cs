@@ -30,6 +30,7 @@
         public const string Host = "{Host}";
         public const string Account = "{Account}";
         public const string Pwd = "{Pwd}";
+        public const string User = "{User}";
         public const string FieldArea = "/*FieldArea*/";
     }
 }

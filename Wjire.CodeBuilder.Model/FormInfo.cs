@@ -10,6 +10,10 @@
 
         public string TableName { get; set; }
 
+        public string Host { get; set; }
+
+        public string User { get; set; }
+
         public string Pwd { get; set; }
     }
 }

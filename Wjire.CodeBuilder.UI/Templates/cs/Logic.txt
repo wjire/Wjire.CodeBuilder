@@ -1,16 +1,16 @@
 ﻿using {NameSpaceName}.Entity;
 using {NameSpaceName}.Repository;
+using Wjire.Dapper;
 
 namespace {NameSpaceName}.Logic
 {
     public class {TableName}Logic
     {
-        public void Add({TableName} entity)
+        private readonly DbContext _dbContext;
+
+        public {TableName}Logic(DbContext dbContext)
         {
-            using (var db = DbFactory.Create{TableName}RepositoryWrite())
-            {
-                db.Add(entity);
-            }
+            _dbContext = dbContext;
         }
     }
 }

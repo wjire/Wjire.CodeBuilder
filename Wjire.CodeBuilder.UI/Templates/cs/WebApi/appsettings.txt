@@ -1,0 +1,6 @@
+﻿{
+  "connectionStrings": {
+    "Read": "Data Source={Host};Initial Catalog={DbName};User ID={User};Password={Pwd}",
+    "Write": "Data Source={Host};Initial Catalog={DbName};User ID={User};Password={Pwd}"
+  }
+}

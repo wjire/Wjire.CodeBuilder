@@ -1,4 +1,4 @@
-﻿using Wjire.Db.Dapper;
+﻿using Wjire.Dapper;
 using {NameSpaceName}.Entity;
 
 namespace {NameSpaceName}.Repository

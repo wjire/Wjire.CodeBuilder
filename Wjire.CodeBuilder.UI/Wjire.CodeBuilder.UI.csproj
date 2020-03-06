@@ -224,7 +224,7 @@
     <Content Include="Templates\cs\Service.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Templates\cs\WebApi\appsettings.Development.txt">
+    <Content Include="Templates\cs\WebApi\appsettings.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Templates\cs\WebApi\Controller.txt">
