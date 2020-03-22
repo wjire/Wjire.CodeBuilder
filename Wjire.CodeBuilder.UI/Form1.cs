@@ -240,7 +240,7 @@ namespace Wjire.CodeBuilder
             {
                 Multiselect = true,
                 Title = "请选择文件",
-                Filter = "excel文件|*.xls",
+                Filter = "excel文件|*.xls;*.xlsx",
             };
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
