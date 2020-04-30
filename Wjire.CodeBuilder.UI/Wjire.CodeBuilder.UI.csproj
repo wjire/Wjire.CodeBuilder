@@ -200,9 +200,7 @@
     <Content Include="Templates\csproj\WebApi.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Templates\cs\DbFactory.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Templates\cs\DbFactory.txt" />
     <Content Include="Templates\cs\Entity.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

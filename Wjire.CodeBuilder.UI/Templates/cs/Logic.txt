@@ -37,13 +37,5 @@ namespace {NameSpaceName}.Logic
                 db.AddOrUpdate(entity);
             }
         }
-
-        public IEnumerable<{TableName}> QueryPage(int pageIndex, int pageSize)
-        {
-            using ({TableName}Repository db = new {TableName}Repository(_dbContext.Read))
-            {
-                return db.QueryPage(pageIndex, pageSize, out int pageCount, out int dataCount);
-            }
-        }
     }
 }
