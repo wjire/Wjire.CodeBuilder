@@ -33,15 +33,12 @@
             this.button_choosePath = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_codePath = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox_result = new System.Windows.Forms.TextBox();
-            this.textBox_namespace = new System.Windows.Forms.TextBox();
             this.comboBox_dbType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_IP = new System.Windows.Forms.ComboBox();
             this.button_toAll = new System.Windows.Forms.Button();
             this.button_openTemplate = new System.Windows.Forms.Button();
-            this.button_editCodeTemplate = new System.Windows.Forms.Button();
             this.textBox_excelPath = new System.Windows.Forms.TextBox();
             this.button_CreateTableSql = new System.Windows.Forms.Button();
             this.button_ChooseExcel = new System.Windows.Forms.Button();
@@ -76,15 +73,12 @@
             this.groupBox1.Controls.Add(this.button_choosePath);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox_codePath);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox_result);
-            this.groupBox1.Controls.Add(this.textBox_namespace);
             this.groupBox1.Controls.Add(this.comboBox_dbType);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox_IP);
             this.groupBox1.Controls.Add(this.button_toAll);
             this.groupBox1.Controls.Add(this.button_openTemplate);
-            this.groupBox1.Controls.Add(this.button_editCodeTemplate);
             this.groupBox1.Controls.Add(this.textBox_excelPath);
             this.groupBox1.Controls.Add(this.button_CreateTableSql);
             this.groupBox1.Controls.Add(this.button_ChooseExcel);
@@ -109,20 +103,20 @@
             // button_toNamespace
             // 
             this.button_toNamespace.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_toNamespace.Location = new System.Drawing.Point(414, 692);
+            this.button_toNamespace.Location = new System.Drawing.Point(1213, 698);
             this.button_toNamespace.Name = "button_toNamespace";
-            this.button_toNamespace.Size = new System.Drawing.Size(122, 34);
+            this.button_toNamespace.Size = new System.Drawing.Size(122, 24);
             this.button_toNamespace.TabIndex = 37;
-            this.button_toNamespace.Text = "打开命名空间";
+            this.button_toNamespace.Text = "打开文件夹";
             this.button_toNamespace.UseVisualStyleBackColor = true;
             this.button_toNamespace.Click += new System.EventHandler(this.button_toNamespace_Click);
             // 
             // button_choosePath
             // 
             this.button_choosePath.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_choosePath.Location = new System.Drawing.Point(804, 601);
+            this.button_choosePath.Location = new System.Drawing.Point(1077, 698);
             this.button_choosePath.Name = "button_choosePath";
-            this.button_choosePath.Size = new System.Drawing.Size(130, 29);
+            this.button_choosePath.Size = new System.Drawing.Size(130, 24);
             this.button_choosePath.TabIndex = 34;
             this.button_choosePath.Text = "选择文件夹";
             this.button_choosePath.UseVisualStyleBackColor = true;
@@ -132,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(328, 607);
+            this.label3.Location = new System.Drawing.Point(328, 701);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 33;
@@ -141,20 +135,10 @@
             // textBox_codePath
             // 
             this.textBox_codePath.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_codePath.Location = new System.Drawing.Point(429, 604);
+            this.textBox_codePath.Location = new System.Drawing.Point(429, 698);
             this.textBox_codePath.Name = "textBox_codePath";
-            this.textBox_codePath.Size = new System.Drawing.Size(344, 23);
+            this.textBox_codePath.Size = new System.Drawing.Size(642, 23);
             this.textBox_codePath.TabIndex = 32;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(328, 651);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "命名空间:";
             // 
             // textBox_result
             // 
@@ -163,17 +147,8 @@
             this.textBox_result.Multiline = true;
             this.textBox_result.Name = "textBox_result";
             this.textBox_result.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_result.Size = new System.Drawing.Size(467, 534);
+            this.textBox_result.Size = new System.Drawing.Size(467, 539);
             this.textBox_result.TabIndex = 23;
-            // 
-            // textBox_namespace
-            // 
-            this.textBox_namespace.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_namespace.Location = new System.Drawing.Point(429, 648);
-            this.textBox_namespace.Name = "textBox_namespace";
-            this.textBox_namespace.Size = new System.Drawing.Size(344, 23);
-            this.textBox_namespace.TabIndex = 30;
-            this.textBox_namespace.Text = "Test";
             // 
             // comboBox_dbType
             // 
@@ -210,9 +185,9 @@
             // button_toAll
             // 
             this.button_toAll.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_toAll.Location = new System.Drawing.Point(331, 692);
+            this.button_toAll.Location = new System.Drawing.Point(1341, 698);
             this.button_toAll.Name = "button_toAll";
-            this.button_toAll.Size = new System.Drawing.Size(77, 34);
+            this.button_toAll.Size = new System.Drawing.Size(77, 24);
             this.button_toAll.TabIndex = 26;
             this.button_toAll.Text = "Build";
             this.button_toAll.UseVisualStyleBackColor = true;
@@ -228,17 +203,6 @@
             this.button_openTemplate.Text = "下载excel模板";
             this.button_openTemplate.UseVisualStyleBackColor = true;
             this.button_openTemplate.Click += new System.EventHandler(this.button_openTemplate_Click);
-            // 
-            // button_editCodeTemplate
-            // 
-            this.button_editCodeTemplate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_editCodeTemplate.Location = new System.Drawing.Point(804, 648);
-            this.button_editCodeTemplate.Name = "button_editCodeTemplate";
-            this.button_editCodeTemplate.Size = new System.Drawing.Size(130, 26);
-            this.button_editCodeTemplate.TabIndex = 25;
-            this.button_editCodeTemplate.Text = "编辑模板文件";
-            this.button_editCodeTemplate.UseVisualStyleBackColor = true;
-            this.button_editCodeTemplate.Click += new System.EventHandler(this.button_editCodeTemplate_Click);
             // 
             // textBox_excelPath
             // 
@@ -316,7 +280,7 @@
             this.groupBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(322, 115);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(618, 469);
+            this.groupBox3.Size = new System.Drawing.Size(618, 564);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "表结构";
@@ -331,9 +295,10 @@
             this.listView_one_tableStruct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_one_tableStruct.FullRowSelect = true;
             this.listView_one_tableStruct.GridLines = true;
+            this.listView_one_tableStruct.HideSelection = false;
             this.listView_one_tableStruct.Location = new System.Drawing.Point(3, 22);
             this.listView_one_tableStruct.Name = "listView_one_tableStruct";
-            this.listView_one_tableStruct.Size = new System.Drawing.Size(612, 444);
+            this.listView_one_tableStruct.Size = new System.Drawing.Size(612, 539);
             this.listView_one_tableStruct.TabIndex = 0;
             this.listView_one_tableStruct.UseCompatibleStateImageBehavior = false;
             this.listView_one_tableStruct.View = System.Windows.Forms.View.Details;
@@ -495,15 +460,12 @@
         private System.Windows.Forms.Button button_ChooseExcel;
         private System.Windows.Forms.Button button_CreateTableSql;
         private System.Windows.Forms.TextBox textBox_excelPath;
-        private System.Windows.Forms.Button button_editCodeTemplate;
         private System.Windows.Forms.Button button_openTemplate;
         private System.Windows.Forms.Button button_toAll;
         private System.Windows.Forms.ComboBox comboBox_IP;
         protected internal System.Windows.Forms.ComboBox comboBox_one_dataBase;
         private System.Windows.Forms.ComboBox comboBox_dbType;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_namespace;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView listView_one_tableStruct;
         private System.Windows.Forms.ColumnHeader columnHeader3;

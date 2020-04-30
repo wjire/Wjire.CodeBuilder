@@ -33,7 +33,7 @@ namespace Wjire.CodeBuilder.Sql
                 {
                     keys.Add("[" + table.ColumnName + "]");
                 }
-                sb.AppendLine($" [{table.ColumnName}] {table.ColumnType}{GetLength(table.ColumnLength)} {GetSortRule(table.ColumnType)} {GetNullable(table)},");
+                sb.AppendLine($" [{table.ColumnName}] {table.ColumnType}{GetLength(table.ColumnLength)} {GetSortRule(table.ColumnType)} {GetDefault(table)} {GetNullable(table)},");
             }
             sb = sb.Remove(sb.Length - 3, 1);
             sb.AppendLine(")");
@@ -77,6 +77,43 @@ GO");
             return null;
         }
 
+        private string GetDefault(TableInfo tableInfo)
+        {
+            if (tableInfo.IsIncrement == "1" || tableInfo.IsNullable == "1")
+            {
+                return null;
+            }
+
+            switch (tableInfo.ColumnType.ToLower())
+            {
+                case "int":
+                case "tinyint":
+                case "smallint":
+                case "bigint":
+                case "decimal":
+                case "money":
+                case "numeric":
+                case "smallmoney":
+                case "float":
+                case "bit":
+                case "real":
+                    return " DEFAULT ((0)) ";
+                case "char":
+                case "nchar":
+                case "varchar":
+                case "nvarchar":
+                case "text":
+                case "ntext":
+                    return " DEFAULT '' ";
+                case "date":
+                case "datetime":
+                case "datetime2":
+                case "smalldatetime":
+                    return " DEFAULT (getdate()) ";
+                default:
+                    return null;
+            }
+        }
 
         private string GetLength(string length)
         {

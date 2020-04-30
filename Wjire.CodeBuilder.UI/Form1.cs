@@ -475,7 +475,7 @@ namespace Wjire.CodeBuilder
 
         private void OpenCurrentNameSpaceFileFolder()
         {
-            OpenFileDialog(Path.Combine(textBox_codePath.Text, textBox_namespace.Text));
+            OpenFileDialog(textBox_codePath.Text);
         }
 
 
@@ -489,8 +489,8 @@ namespace Wjire.CodeBuilder
         {
             return new FormInfo
             {
-                BasePath = Path.Combine(textBox_codePath.Text, textBox_namespace.Text),
-                NameSpaceName = textBox_namespace.Text,
+                BasePath = textBox_codePath.Text,
+                NameSpaceName = Path.GetFileName(textBox_codePath.Text),
                 DbName = textBox_dbName.Text,
                 TableName = string.IsNullOrWhiteSpace(tableName) ? string.Empty : tableName,
                 Pwd = textBox_one_pwd.Text,
